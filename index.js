@@ -90,14 +90,13 @@ function drawHouse() {
 }
 //Ex2:
 function drawLogo() {
-    // Draw a circle as a base
+   
     context.beginPath();
     context.arc(100, 100, 50, 0, Math.PI * 2);
     context.fillStyle = 'black';
     context.fill();
     context.stroke();
 
-    // Draw a path in the center
     context.beginPath();
     context.moveTo(70, 100);
     context.lineTo(130, 100);
@@ -106,7 +105,6 @@ function drawLogo() {
     context.fillStyle = 'white';
     context.fill();
 
-    // Add text
     context.font = '20px Arial';
     context.fillStyle = 'white';
     context.fillText('HD', 82, 124);
@@ -121,7 +119,7 @@ function drawBarChart() {
         context.fillStyle = 'teal';
         context.fillRect(50 + i * (barWidth + spacing), canvas.height - barHeights[i] - 20, barWidth, barHeights[i]);
 
-        // Draw labels
+        
         context.fillStyle = 'black';
         context.font = '16px Arial';
         context.fillText(`Bar ${i + 1}`, 55 + i * (barWidth + spacing), canvas.height - 5);
@@ -129,18 +127,18 @@ function drawBarChart() {
 }
 //Ex4
 function drawClock() {
-    // Tọa độ mới của tâm đồng hồ (dịch sang phải để tránh chồng lên căn nhà)
-    const centerX = 500; // Tăng giá trị x để dịch sang phải
-    const centerY = 200; // Giữ nguyên y nếu không cần dịch lên/xuống
+  
+    const centerX = 500; 
+    const centerY = 200; 
 
-    // Vẽ mặt đồng hồ
+  
     context.beginPath();
     context.arc(centerX, centerY, 100, 0, Math.PI * 2);
     context.fillStyle = 'white';
     context.fill();
     context.stroke();
 
-    // Vẽ các mốc giờ
+    
     for (let i = 0; i < 12; i++) {
         let angle = (Math.PI / 6) * i;
         let x1 = centerX + Math.cos(angle) * 90;
